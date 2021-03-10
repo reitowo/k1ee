@@ -9,5 +9,7 @@ target_sources(k1ee PRIVATE
     "k1ee/file.h"
     "k1ee/exception.h"
 )
-
-install(DIRECTORY k1ee DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+ 
+if (NOT DISABLE_INSTALL_HEADERS)
+  install(DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/../include/k1ee DESTINATION include)
+endif()
