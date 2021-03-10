@@ -31,7 +31,4 @@ configure_package_config_file(
 install(
   EXPORT ${TARGETS_EXPORT_NAME} 
   DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}"
-)
-
-install(FILES "${PROJECT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
-        DESTINATION lib/cmake/${PROJECT_NAME})
+) 
