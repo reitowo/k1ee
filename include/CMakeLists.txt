@@ -6,6 +6,7 @@ target_include_directories(k1ee PUBLIC
 
 target_sources(k1ee PRIVATE
      # Header files (useful in IDEs)
+    "k1ee/k1ee.h"
     "k1ee/file.h"
     "k1ee/exception.h"
 )

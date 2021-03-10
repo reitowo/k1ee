@@ -1,7 +1,5 @@
-﻿#include "k1ee/file.h"  
-#include <fstream>
-
-#include "k1ee/exception.h"
+﻿#include "k1ee/k1ee.h"  
+#include <fstream> 
 
 std::vector<uint8_t> k1ee::read_all_bytes(const std::filesystem::path& path)
 {
