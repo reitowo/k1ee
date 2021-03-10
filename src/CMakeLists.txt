@@ -12,17 +12,9 @@ target_include_directories(k1ee PUBLIC $<INSTALL_INTERFACE:include>)
 set_target_properties(k1ee
      PROPERTIES
      VERSION ${${PROJECT_NAME}_VERSION}
-     SOVERSION ${${PROJECT_NAME}_VERSION_MAJOR})
-     
+     SOVERSION ${${PROJECT_NAME}_VERSION_MAJOR}) 
 
-set(TARGETS_EXPORT_NAME "${PROJECT_NAME}Targets")
-
-include(CMakePackageConfigHelpers)
-write_basic_package_version_file(
-    "${PROJECT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake"
-    VERSION ${PACKAGE_VERSION}
-    COMPATIBILITY SameMajorVersion
-)
+set(TARGETS_EXPORT_NAME "${PROJECT_NAME}Targets") 
      
 install(TARGETS k1ee
   EXPORT ${TARGETS_EXPORT_NAME}
@@ -44,8 +36,7 @@ install(
   DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}"
 )
 
-install(FILES "${PROJECT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake"
-                "${PROJECT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
+install(FILES "${PROJECT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
         DESTINATION lib/cmake/${PROJECT_NAME})
 
 if (NOT DISABLE_INSTALL_HEADERS)
