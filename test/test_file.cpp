@@ -4,7 +4,12 @@
 
 int main()
 {
-	auto ret = k1ee::read_all_bytes(R"(./data/test_data.dat)");
+	const auto* path = R"(./data/test_data.dat)";
+	
+	auto ret = k1ee::read_all_bytes(path);
 
-	assert(ret.size() == 264);
+	if(ret.size() != 264)
+		return 1;
+
+	k1ee::write_all_bytes(path, ret.data(), ret.size());
 }
