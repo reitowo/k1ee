@@ -9,6 +9,7 @@ target_sources(k1ee PRIVATE
     "k1ee/k1ee.h"
     "k1ee/file.h"
     "k1ee/exception.h"
+    "k1ee/encoding.h"
 )
 
 install(DIRECTORY k1ee DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
