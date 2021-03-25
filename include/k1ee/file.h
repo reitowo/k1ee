@@ -33,4 +33,6 @@ std::vector<DataType> read_all_bytes(const std::filesystem::path& path)
 }
 	
 void write_all_bytes(const std::filesystem::path& path, const void* data, size_t size);
+	
+std::string read_all_texts(const std::filesystem::path& path);
 }
