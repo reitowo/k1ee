@@ -3,7 +3,8 @@ cmake_minimum_required (VERSION 3.15)
 
 add_library(k1ee
     "file.cpp"
-    "encoding.cpp")
+    "encoding.cpp"
+    "time.cpp")
 
 add_library(k1ee::k1ee ALIAS k1ee) 
 
