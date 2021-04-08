@@ -17,6 +17,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib) 
 # set(K1EE_LIBRARIES k1ee CACHE INTERNAL "")
  
+add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
+add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
+
 option(BUILD_K1EE_TESTS "Build Tests" ON)
 
 include(GNUInstallDirs)
