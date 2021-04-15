@@ -14,6 +14,7 @@ macro(add_k1ee_test _TEST_NAME)
 endmacro()
 
 add_k1ee_test(file)
+add_k1ee_test(hook)
 add_k1ee_test(encoding)
 
 add_custom_command(TARGET test_file POST_BUILD COMMAND ${CMAKE_COMMAND}

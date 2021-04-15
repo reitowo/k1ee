@@ -4,5 +4,5 @@
 
 namespace k1ee
 {
-	time_t getTimestampMillisecond();
+	time_t getTimestampMillisecond(); 
 }
